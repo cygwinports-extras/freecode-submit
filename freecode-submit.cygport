@@ -1,0 +1,20 @@
+NAME="freecode-submit"
+VERSION=2.4
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="Freecode update submitter"
+DESCRIPTION="freecode-submit is a script that supports remote submission of
+release updates to Freecode via its JSON API. It is intended for use in
+project release scripts. It reads the metadata from an RFC-2822-like message
+on standard input, possibly with overrides by command-line switches."
+DESCRIPTION="ASCII character tables"
+HOMEPAGE="http://www.catb.org/~esr/${PN}/"
+SRC_URI="http://www.catb.org/~esr/${PN}/${P}.tar.gz"
+
+src_compile() { :; }
+
+src_install() {
+	cd ${S}
+	dobin ${PN}
+	doman ${PN}.1
+}
